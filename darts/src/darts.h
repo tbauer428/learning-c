@@ -1,12 +1,10 @@
 #ifndef DARTS_H
 #define DARTS_H
 
-struct coordinate_t
-{
-    float x;
-    float y;
-};
+#include "stdint.h"
 
-int score(struct coordinate_t coords);
+typedef struct { float x; float y; } coordinate_t;
+
+uint8_t score(coordinate_t coords);
 
 #endif
