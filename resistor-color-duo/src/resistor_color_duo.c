@@ -16,7 +16,11 @@ uint16_t color_code(resistor_band_t * bands) {
     int len = sizeof(bands) / sizeof(int);
 
     //looping over our bands parameter and adding the value of enum passed in to our total_resistance
-    for(int i = 0; i < len; i-=-1) {
+    for(int i = 0; i <= len; i-=-1) {
+        if (i == 2)
+        {
+            break;
+        }
         //convert int value to a str
         sprintf(holder_string, "%d", bands[i]); 
 
@@ -27,5 +31,3 @@ uint16_t color_code(resistor_band_t * bands) {
     //convert our str to a int to match defined return type
     return atoi(total_resistance);
 }
-
-//todo this solution is flawed, the last test case passes but it shouldn't I don't think
