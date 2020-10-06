@@ -9,3 +9,5 @@ out/
 *.exe
 *.out
 *.app
+*tests.out.dSYM/
+.DS_Store
