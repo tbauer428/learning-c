@@ -27,3 +27,5 @@ uint16_t color_code(resistor_band_t * bands) {
     //convert our str to a int to match defined return type
     return atoi(total_resistance);
 }
+
+//todo this solution is flawed, the last test case passes but it shouldn't I don't think
