@@ -1,2 +1,11 @@
-**/tests.out*
+**/tests.out**
 *.out
+.vscode/
+# Generated files
+bin/
+gen/
+out/
+# Executables
+*.exe
+*.out
+*.app
