@@ -1,6 +1,7 @@
-#ifndef RESISTOR_COLOR_H
-#define RESISTOR_COLOR_H
-
+#ifndef RESISTOR_COLOR_TRIO_H
+#define RESISTOR_COLOR_TRIO_H
+#define OHMS "ohms"
+#define KILOOHMS "kiloohms"
 typedef enum {
     BLACK = 0,
     BROWN = 1,
@@ -14,12 +15,12 @@ typedef enum {
     WHITE = 9
 } resistor_band_t;
 
-typedef unsigned short uint16_t;
+typedef struct {
+    int value;
+    char * unit;
+} resistor_value_t;
 
 typedef enum {false, true} bool;
 
-uint16_t color_code(resistor_band_t);
-
-resistor_band_t * colors();
-
+resistor_value_t color_code(resistor_band_t[]);
 #endif
